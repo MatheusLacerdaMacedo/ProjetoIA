@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    background-color: #2e2828;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #e0e0e0;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+header img.logo {
+    width: 30px;
+    height: 30px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.menu {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu button {
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-1 {
+    width: 20px;
+    height: 20px;
+}
+.menu-2 {
+    width: 30px;
+    height: 30px;
+}
+
+.container {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.animal-img {
+    width: 400px;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+footer button {
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
