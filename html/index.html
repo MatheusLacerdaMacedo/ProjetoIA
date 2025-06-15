@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IdentiCat</title>
+
+    <!-- CSS Geral -->
     <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="../css/menu.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
 
-<header>
-    <img src="./../img/logo.png" alt="IdentiCat Logo" class="logo">
-    <h1>IdentiCat</h1>
-</header>
+    <!-- MENU LATERAL -->
+    <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i class="bi bi-list" id="btn-exp"></i>
+        </div>
 
-<div class="menu">
-    <button><img src="./../img/menu-aberto.png" alt="Menu1" class="menu-1"></button>
-     <button><img src="./../img/nos-de-ia.png" alt="Menu12" class="menu-2"></button>
-</div>
+        <ul>
+            <li class="item-menu">
+                <a href="ia.html">
+                    <span class="icon"><i class="bi bi-openai"></i></span>
+                    <span class="txt-link">IA</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-book"></i></span>
+                    <span class="txt-link">Raças</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-bar-chart-fill"></i></span>
+                    <span class="txt-link">Resultados</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-info-circle"></i></span>
+                    <span class="txt-link">Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-<div class="container">
-    <img src="./../img/19.jpg" alt="Imagem de animal" class="animal-img">
-    
-    <div class="buttons">
-        <button class="btn">Doméstico</button>
-        <button class="btn">Selvagem</button>
-    </div>
-</div>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="main-content">
+        <header>
+            <img src="./../img/logo.png" alt="IdentiCat Logo" class="logo">
+            <h1>IdentiCat</h1>
+        </header>
+        <div class="score-container">
+            Pontuação: <span id="score">0</span>
+        </div>
+        <div class="container">
+            <img src="" alt="Imagem de animal" class="animal-img">
 
-<footer>
-    <button>ℹ️</button>
-</footer>
+            <div class="buttons">
+                <button class="btn" data-resp="domestico">Doméstico</button>
+                <button class="btn" data-resp="selvagem">Selvagem</button>
+            </div>
+        </div>
+
+        <script src="./../script/index.js"></script>
+        <!-- SCRIPT DO MENU -->
+        <script src="./../script/menu.js"></script>
 
 </body>
+
 </html>
