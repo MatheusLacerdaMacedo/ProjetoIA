@@ -2,15 +2,84 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Resultados</title>
+    <title>Resultados da Classificação</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        a.voltar-menu {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a.voltar-menu:hover {
+            text-decoration: underline;
+        }
+        .resultado {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .imagem-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 220px;
+            text-align: center;
+        }
+        .imagem-item img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+        .domestico {
+            color: green;
+            font-weight: bold;
+        }
+        .selvagem {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
-<h2>Resultados</h2>
-<p></p>
+<a href="index.html" class="voltar-menu">← Voltar ao menu</a>
 
-<a href="index.html">Voltar ao menu</a>
+<h2>Resultados da Classificação de Gatos</h2>
+
+<div class="resultado" id="resultado"></div>
+
+<script>
+    fetch('./../RespostasIA/respostas_ia.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('resultado');
+
+            data.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'imagem-item';
+
+                const img = document.createElement('img');
+                img.src = item.imagem;  
+
+                
+
+                const classe = document.createElement('p');
+                classe.textContent = item.classe.toUpperCase();
+                classe.className = item.classe;
+
+                div.appendChild(img);
+                div.appendChild(classe);
+
+                container.appendChild(div);
+            });
+        })
+        .catch(error => console.error('Erro ao carregar o JSON:', error));
+</script>
+
 
 </body>
 </html>
